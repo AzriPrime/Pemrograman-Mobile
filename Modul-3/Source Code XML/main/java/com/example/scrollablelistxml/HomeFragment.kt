@@ -1,0 +1,58 @@
+package com.example.scrollablelistxml
+
+import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.scrollablelistxml.databinding.FragmentHomeBinding
+import data.FishData
+
+class HomeFragment : Fragment() {
+
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val fishList = FishData.getFishList()
+
+        val adapter = FishAdapter(
+            fishList = fishList,
+            onWikiClick = { fish ->
+                // Intent web
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(fish.wikiUrl))
+                startActivity(intent)
+            },
+            onDetailClick = { fish ->
+                // Component Navigasi
+                val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(fish)
+                findNavController().navigate(action)
+            }
+        )
+
+        binding.rvFishList.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            this.adapter = adapter
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+}

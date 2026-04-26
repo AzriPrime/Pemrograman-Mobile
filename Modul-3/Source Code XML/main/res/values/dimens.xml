@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Padding & Margin -->
+    <dimen name="spacing_tiny">2dp</dimen>
+    <dimen name="spacing_small">4dp</dimen>
+    <dimen name="spacing_medium_small">6dp</dimen>
+    <dimen name="spacing_medium">8dp</dimen>
+    <dimen name="spacing_large_small">10dp</dimen>
+    <dimen name="spacing_large">12dp</dimen>
+    <dimen name="spacing_xlarge">16dp</dimen>
+    <dimen name="spacing_xxlarge">20dp</dimen>
+    <dimen name="spacing_xxxlarge">24dp</dimen>
+    <dimen name="spacing_negative_xxxlarge">-24dp</dimen>
+    
+    <!-- Text Sizes -->
+    <dimen name="text_small">11sp</dimen>
+    <dimen name="text_regular">12sp</dimen>
+    <dimen name="text_medium">13sp</dimen>
+    <dimen name="text_large">14sp</dimen>
+    <dimen name="text_xlarge">18sp</dimen>
+    <dimen name="text_title">24sp</dimen>
+    
+    <!-- Specific Components Sizes -->
+    <dimen name="img_fish_width">110dp</dimen>
+    <dimen name="img_fish_height">140dp</dimen>
+    <dimen name="img_detail_height">280dp</dimen>
+    <dimen name="btn_height">40dp</dimen>
+    <dimen name="btn_radius">10dp</dimen>
+    <dimen name="card_radius">16dp</dimen>
+    <dimen name="card_radius_large">20dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_elevation_large">8dp</dimen>
+    <dimen name="icon_size_small">16dp</dimen>
+    <dimen name="icon_size_medium">20dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+</resources>

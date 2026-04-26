@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Scrollable List XML</string>
+    <string name="title_fish_species">Spesies Ikan</string>
+    <string name="btn_wiki">Wiki</string>
+    <string name="btn_detail">Detail</string>
+    <string name="btn_back">Kembali</string>
+    <string name="label_habitat">Habitat:</string>
+    <string name="label_size">Ukuran:</string>
+    <string name="label_description">Deskripsi:</string>
+</resources>
