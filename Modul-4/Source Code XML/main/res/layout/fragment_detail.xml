@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_detail_fish"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/img_detail_height"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/RoundedBottomImageStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/cupang" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_back"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@string/btn_back"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_large"
+            app:icon="@drawable/ic_arrow_back"
+            app:iconTint="@color/white"
+            app:iconSize="@dimen/icon_size_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Content Card overlapping image -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_xlarge"
+            android:layout_marginTop="@dimen/spacing_negative_xxxlarge"
+            app:cardBackgroundColor="@color/card_dark"
+            app:cardCornerRadius="@dimen/card_radius_large"
+            app:cardElevation="@dimen/card_elevation_large"
+            app:strokeWidth="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_detail_fish">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_xxlarge">
+
+                <!-- Name and Latin Name Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_detail_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_title"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium"
+                        tools:text="Ikan Cupang" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_detail_latin_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:textColor="@color/accent_blue"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="italic"
+                    tools:text="Betta splendens" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginVertical="@dimen/spacing_xlarge"
+                    android:background="@color/divider_dark" />
+
+                <!-- Habitat Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/spacing_medium">
+
+                    <TextView
+                        android:id="@+id/tv_detail_habitat_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/accent_blue"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold"
+                        tools:text="Habitat:" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_habitat_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/text_large"
+                        tools:text="Air Tawar" />
+                </LinearLayout>
+
+                <!-- Size Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/spacing_large">
+
+                    <TextView
+                        android:id="@+id/tv_detail_size_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/accent_blue"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold"
+                        tools:text="Ukuran:" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_size_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/text_large"
+                        tools:text="5 – 7 cm" />
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:background="@color/divider_dark" />
+
+                <!-- Description -->
+                <TextView
+                    android:id="@+id/tv_detail_desc_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium_small"
+                    android:textColor="@color/accent_blue"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold"
+                    tools:text="Deskripsi:" />
+
+                <TextView
+                    android:id="@+id/tv_detail_desc_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_large"
+                    android:lineSpacingExtra="@dimen/spacing_small"
+                    tools:text="Ikan cupang adalah ikan hias air tawar yang terkenal dengan siripnya yang indah..." />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_xxxlarge"
+            app:layout_constraintTop_toBottomOf="@id/card_detail" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
